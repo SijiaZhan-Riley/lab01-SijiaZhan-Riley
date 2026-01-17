@@ -13,7 +13,7 @@ IntList::IntList(const IntList& source) {
     tail = nullptr;
 
     Node* curr = source.head;
-    while (curr != nullptr) {
+    while (curr) {
         push_back(curr->info);
         curr = curr->next;
     }
@@ -92,7 +92,7 @@ void IntList::push_front(int value) {
     Node* n=new Node{value, head};
     head=n;
 
-    if(tail==nullptr);
+    if(tail==nullptr)
         tail=head;
 }
 
